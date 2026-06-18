@@ -55,7 +55,7 @@ summary(fda_sustancias)
 # cada sustancia en alimentos (ej. conservador, edulcorante, colorante, etc.)
 # Este análisis permite identificar cuáles categorías concentran el mayor
 # número de ingredientes aprobados.
-# AGREGADO: limpiar etiquetas HTML y quedarse con el primer uso de cada sustancia
+# limpiar etiquetas HTML y quedarse con el primer uso de cada sustancia
 fda_sustancias <- fda_sustancias %>%
   mutate(
     uso_limpio = str_remove_all(Used.for..Technical.Effect., "<br\\s*/?>"),
